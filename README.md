@@ -28,8 +28,8 @@ As you can see there is an opportunity to satisfy the last 3 requirements in a s
 
 Following the source code here: https://github.com/TelegramBots/Telegram.Bot.Examples/tree/master/Telegram.Bot.Examples.WebHook but have some changes to adapt the requirement.
 
-# Setup:
-Ngrok: to create a public URL for webhook to listen for changes from input messages
+### Ngrok Setup:
+Ngrok is used to create a public URL for webhook to listen for changes from input messages.
 Steps:
 - Download https://dashboard.ngrok.com/get-started/setup
 - Unzip ngrok file and run ngrok.exe
@@ -38,13 +38,13 @@ Steps:
 - Go to http://localhost:4040/inspect/http to get the public URL (the one with https) and also inspect the request coming to Webhook URL when user inputs message on Telegram.
 - Sometime ngrok server will be down and get the error ERR_NGROK_802 when run "ngrok" commands. I just faced this error some times but after waiting for some hours, it is back and work normally.
 
-# Telegram.Bot.Webhook project:
+### Telegram.Bot.Webhook project:
 - Create a bot from Telegram https://core.telegram.org/bots#6-botfather or use the existing one: KhoaTest
 - Some settings required for project to run (change in appsettings.Development.json): 
   + If creating new bot, then update the value for key BotConfiguration/BotToken with the token of new bot.
   + Update the value of key BotConfiguration/HostAddress to the public URL (the one with https) from http://localhost:4040/inspect/http. If there are a lot of requests displaying, just click "Clear" button to clear request logs and the public URL will appear.
 
-# Bot:
+### Bot:
 - There are 4 available commands:
   + /help: to list all available commands of this bot
   + /quotes: to get Keanu Reeves's random quotes
