@@ -31,7 +31,7 @@ Following the source code here: https://github.com/TelegramBots/Telegram.Bot.Exa
 ### Ngrok Setup:
 Ngrok is used to create a public URL for webhook to listen for changes from input messages.
 Steps:
-- Download https://dashboard.ngrok.com/get-started/setup
+- Download https://ngrok.com/download
 - Unzip ngrok file and run ngrok.exe
 - Run: ```ngrok token: 20EX7YrToXSSkN4eH6Ew8q6DS6L_2kvEZqDLUQrimDwAcQfkv``` to save the token to config file.
 - Run: ```ngrok http 88```. The port 88 is also used in Telegram.Bot.Webhook project to run locally so that it can listen to the changes from public URL.
