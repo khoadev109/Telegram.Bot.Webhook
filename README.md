@@ -35,7 +35,7 @@ Steps:
 
 - Download https://ngrok.com/download
 - Unzip ngrok file and run ngrok.exe
-- Run: ```ngrok token: 20EX7YrToXSSkN4eH6Ew8q6DS6L_2kvEZqDLUQrimDwAcQfkv``` to save the token to config file.
+- Run: ```ngrok authtoken 20EX7YrToXSSkN4eH6Ew8q6DS6L_2kvEZqDLUQrimDwAcQfkv``` to save the token to config file.
 - Run ```tskill /A ngrok``` to end all ngrok ports running.
 - Run: ```ngrok http 88```. The port 88 is also used in Telegram.Bot.Webhook project to run locally so that it can listen to the changes from public URL.
 - Go to http://localhost:4040/inspect/http to get the public URL (the one with https) and also inspect the request coming to Webhook URL when user inputs message on Telegram.
