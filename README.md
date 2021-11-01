@@ -40,7 +40,7 @@ Steps:
 
 ### Telegram.Bot.Webhook project:
 - Create a bot from Telegram https://core.telegram.org/bots#6-botfather or use the existing one: KhoaTest
-- Some settings required for project to run (change in appsettings.Development.json): 
+- Some settings required for project to run (change in **appsettings.Development.json**):
   + If creating new bot, then update the value for key BotConfiguration/BotToken with the token of new bot.
   + Update the value of key BotConfiguration/HostAddress to the public URL (the one with https) from http://localhost:4040/inspect/http. If there are a lot of requests displaying, just click "Clear" button to clear request logs and the public URL will appear.
 
