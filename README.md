@@ -24,3 +24,30 @@ The bot should:
 
 As you can see there is an opportunity to satisfy the last 3 requirements in a single command if you wish.
 
+## Telegram Webhook Bot
+
+Following the source code here: https://github.com/TelegramBots/Telegram.Bot.Examples/tree/master/Telegram.Bot.Examples.WebHook but have some changes to adapt the requirement.
+
+# Setup:
+Ngrok: to create a public URL for webhook to listen for changes from input messages
+Steps:
+- Download https://dashboard.ngrok.com/get-started/setup
+- Unzip ngrok file and run ngrok.exe
+- Run: ngrok token: 20EX7YrToXSSkN4eH6Ew8q6DS6L_2kvEZqDLUQrimDwAcQfkv to save the token to config file.
+- Run: ngrok http 88. The port 88 is also used in Telegram.Bot.Webhook project to run locally so that it can listen to the changes from public URL.
+- Go to http://localhost:4040/inspect/http to get the public URL (the one with https) and also inspect the request coming to Webhook URL when user inputs message on Telegram.
+- Sometime ngrok server will be down and get the error ERR_NGROK_802 when run "ngrok" commands. I just faced this error some times but after waiting for some hours, it is back and work normally.
+
+# Telegram.Bot.Webhook project:
+- Create a bot from Telegram https://core.telegram.org/bots#6-botfather or use the existing one: KhoaTest
+- Some settings required for project to run (change in appsettings.Development.json): 
+  + If creating new bot, then update the value for key BotConfiguration/BotToken with the token of new bot.
+  + Update the value of key BotConfiguration/HostAddress to the public URL (the one with https) from http://localhost:4040/inspect/http. If there are a lot of requests displaying, just click "Clear" button to clear request logs and the public URL will appear.
+
+# Bot:
+- There are 4 available commands:
+  + /help: to list all available commands of this bot
+  + /quotes: to get Keanu Reeves's random quotes
+  + /input: get input parameters separated by whitespace and return parameters separated by commad. Example: /input param1 param2
+  + /option: get latest exchange rates of your selected currency (AUD, USD, SGD, EUR). Base rate is EUR. This command I used a free exchange rates api https://exchangeratesapi.io/ to get rate for a specific currency
+ 
