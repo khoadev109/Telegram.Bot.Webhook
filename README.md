@@ -51,6 +51,6 @@ Steps:
 - There are 4 available commands:
   + ```/help```: to list all available commands of this bot
   + ```/quotes```: to get Keanu Reeves's random quotes
-  + ```/input```: get input parameters separated by whitespace and return parameters separated by commad. Example: /input param1 param2
+  + ```/input```: get input parameters separated by whitespace and return parameters separated by comma. Example: /input param1 param2
   + ```/option```: get latest exchange rates of your selected currency (AUD, USD, SGD, EUR). Base rate is EUR. This command I used a free exchange rates api https://exchangeratesapi.io/ to get rate for a specific currency
  
